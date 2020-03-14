@@ -79,7 +79,7 @@ const schema = makeAugmentedSchema({
   }
 })
 
-const neo4jUri = process.env.NEO4J_URI           || process.env.GRAPHENEDB_BOLT_URL || 'bolt://hobby-lkdponijinkogbkeomknimel.dbs.graphenedb.com:24787'
+const neo4jUri = process.env.NEO4J_URI           || process.env.GRAPHENEDB_BOLT_URL
 const neo4jUser = process.env.NEO4J_USER         || process.env.GRAPHENEDB_BOLT_USER
 const neo4jPassword = process.env.NEO4J_PASSWORD || process.env.GRAPHENEDB_BOLT_PASSWORD
 
