@@ -10,12 +10,13 @@ For using this project, you need prepare neo4j(GrapheneDB) server.
 
 Edit `start.sh` with environment values indicating prepared neo4j server (NEO4J_URI/NEO4J_USER/NEO4J_PASSWORD).
 
-Run `start.sh` for a GraphQL server. Access `http://localhost:3000/` and use GUI for GraphQL.
+Run `start.sh` for a GraphQL server. Access `http://localhost:3000/` and use GraphQL.
 
 ## usage
 
 - read (all gunclocks)
 
+```
   { 
     Gunclock {
       _id,
@@ -24,7 +25,9 @@ Run `start.sh` for a GraphQL server. Access `http://localhost:3000/` and use GUI
       color
     }
   }
+```
 
+```
   { 
     Gunclock {
       _id,
@@ -36,4 +39,5 @@ Run `start.sh` for a GraphQL server. Access `http://localhost:3000/` and use GUI
       longHandCast{text}
     }
   }
+```
 
