@@ -12,7 +12,7 @@ Edit `start.sh` with environment values indicating prepared neo4j server (NEO4J_
 
 Run `start.sh` for a GraphQL server. Access `http://localhost:3000/` and use GraphQL.
 
-## usage
+## usage: GraphQL API
 
 - read (all gunclocks)
 
@@ -102,3 +102,4 @@ Run `start.sh` for a GraphQL server. Access `http://localhost:3000/` and use Gra
 ## example (heroku)
 
 https://gunclock-neo4j.herokuapp.com/
+
