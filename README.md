@@ -114,7 +114,8 @@ Run `start.sh` for a GraphQL server. Access `http://localhost:3000/` and use Gra
     deleteGunclock(
       uuid:"c52af318-c351-4e89-99c0-da8cad143898"
     )
-  } { _id }
+    { _id }
+  } 
 ```
 
 ## example (heroku)
