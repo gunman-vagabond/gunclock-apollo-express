@@ -51,7 +51,10 @@ Run `start.sh` for a GraphQL server. Access `http://localhost:3000/` and use Gra
       _id,
       uuid,
       size,
-      color
+      color,
+      city{name},
+      shortHandCast{text},
+      longHandCast{text}
     }
   }
 ```
