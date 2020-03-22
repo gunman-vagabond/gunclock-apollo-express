@@ -33,10 +33,10 @@ const typeDefs = `
         @cypher(statement: "MATCH ( c:City{name: $cityName} ) MATCH ( shcast:Cast {name: $shortHandCastName} ) MATCH ( lhcast:Cast {name: $longHandCastName} ) CREATE ( g:Gunclock {uuid: apoc.create.uuid(), size: $size, color:$color} ) MERGE (g)-[:city]->(c) MERGE (shcast)<-[:shortHandCast]-(g)-[:longHandCast]->(lhcast) RETURN g" )
 
       updateGunclock( uuid: ID, size: Int, color: String, cityName: String, shortHandCastName: String, longHandCastName: String ): Gunclock
-        @cypher(statement: "MATCH ( g:Gunclock {uuid: $uuid} ) MATCH ( c:City{name: $cityName} ) MATCH ( shcast:Cast {name: $shortHandCastName} ) MATCH ( lhcast:Cast {name: $longHandCastName} ) MATCH (g)-[r]->() DELETE r MERGE (g)-[:city]->(c) MERGE (shcast)<-[:shortHandCast]-(g)-[:longHandCast]->(lhcast) RETURN g" )
+        @cypher(statement: "MATCH ( g:Gunclock {uuid: $uuid} ) MATCH ( c:City{name: $cityName} ) MATCH ( shcast:Cast {name: $shortHandCastName} ) MATCH ( lhcast:Cast {name: $longHandCastName} ) MATCH (g)-[r]->() DELETE r SET g.size = $size SET g.color = $color MERGE (g)-[:city]->(c) MERGE (shcast)<-[:shortHandCast]-(g)-[:longHandCast]->(lhcast) RETURN g" )
 
       deleteGunclock( uuid: ID ): Gunclock
-        @cypher(statement: "MATCH ( g:Gunclock {uuid: $uuid} ) DELETE g" )
+        @cypher(statement: "MATCH ( g:Gunclock {uuid: $uuid} ) MATCH (g)-[r]->() DELETE r DELETE g" )
   }
 `;
 
