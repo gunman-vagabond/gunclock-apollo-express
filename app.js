@@ -11,9 +11,9 @@ const typeDefs = `
     uuid : ID!
     size: Int
     color: String
-    city: City @relation(name: "city", direction: "OUT")
-    shortHandCast: Cast @relation(name: "shortHandCast", direction: "OUT")
-    longHandCast: Cast @relation(name: "longHandCast", direction: "OUT")
+    city: City @relation(name: "city", direction: OUT)
+    shortHandCast: Cast @relation(name: "shortHandCast", direction: OUT)
+    longHandCast: Cast @relation(name: "longHandCast", direction: OUT)
   }
   type City {
     name: String
