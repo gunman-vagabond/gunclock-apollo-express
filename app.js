@@ -83,7 +83,11 @@ const neo4jUri = process.env.NEO4J_URI           || process.env.GRAPHENEDB_BOLT_
 const neo4jUser = process.env.NEO4J_USER         || process.env.GRAPHENEDB_BOLT_USER
 const neo4jPassword = process.env.NEO4J_PASSWORD || process.env.GRAPHENEDB_BOLT_PASSWORD
 
-const driver = neo4j.driver(neo4jUri, neo4j.auth.basic(neo4jUser, neo4jPassword))
+const driver = neo4j.driver(
+  neo4jUri,
+  neo4j.auth.basic(neo4jUser, neo4jPassword),
+  { encrypted: 'ENCRYPTION_OFF' }
+)
 
 const server = new ApolloServer({ 
   schema, 
