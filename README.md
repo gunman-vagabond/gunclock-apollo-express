@@ -66,7 +66,7 @@ CREATE
 
 - install node.js application (apollo + express)
 ```
-git clone https://github.com/gunman-vagabond/gunclock-apollo-express
+git clone https://github.com/gunman-vagabond/gunclock-apollo-express.git
 cd gunclock-apollo-express/
 npm install
 ```
