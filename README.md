@@ -64,7 +64,7 @@ CREATE
 
 ## install
 
-- install node.js application
+- install node.js application (apollo + express)
 ```
 git clone https://github.com/gunman-vagabond/gunclock-apollo-express
 cd gunclock-apollo-express/
